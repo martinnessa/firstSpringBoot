@@ -29,8 +29,9 @@ public class PartsUnitTest {
     @Test
     void shouldGetPartsFromService(){
         ArrayList<Part> partsList = new ArrayList<Part>(List.of(new Part("pogo")));
-
         when(partsRepository.getParts()).thenReturn(partsList);
+
         assertThat(partsService.getParts().size()).isEqualTo(1);
+        assertThat(partsService.getParts().get(0).name()).isEqualTo("pogo");
     }
 }
