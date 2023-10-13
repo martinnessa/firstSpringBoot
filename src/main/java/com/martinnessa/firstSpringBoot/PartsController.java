@@ -25,4 +25,8 @@ public class PartsController {
     public void addPart(@RequestBody Part part){
         partService.addParts(part);
     }
+
+    @DeleteMapping()
+    public void deleteParts(@RequestBody Part part){partService.deleteParts(part);}
 }
+

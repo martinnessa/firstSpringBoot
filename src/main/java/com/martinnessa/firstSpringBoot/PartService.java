@@ -18,4 +18,6 @@ public class PartService {
     public void addParts(Part part){
         partsRepository.addParts(part);
     }
+
+    public void deleteParts(Part part){ partsRepository.deleteParts(part);}
 }
